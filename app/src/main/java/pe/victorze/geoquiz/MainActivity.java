@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
         mQuestionTextView = (TextView) findViewById(R.id.question_text_view);
 
         mTrueButton = (Button) findViewById(R.id.true_button);
+
         mTrueButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -113,15 +114,15 @@ public class MainActivity extends AppCompatActivity {
         savedInstanceState.putInt(KEY_INDEX, mCurrentIndex);
     }
 
-        @Override
-        public void onStop() {
-            super.onStop();
-            Log.d(TAG, "onStop() called");
-        }
-
-        @Override
-        public void onDestroy() {
-            super.onDestroy();
-            Log.d(TAG, "onDestroy() called");
-        }
+    @Override
+    public void onStop() {
+        super.onStop();
+        Log.d(TAG, "onStop() called");
     }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        Log.d(TAG, "onDestroy() called");
+    }
+}
